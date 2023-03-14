@@ -40,11 +40,11 @@ const News = (props) => {
     setLoading(false)
     props.setProgress(100);
   }
+    document.title = `${capital(props.category)} - NewsToday`
 
   useEffect(() => {
-    document.title = `${capital(props.category)} - NewsToday`
     updateNews();
-  }, [])
+  }, [document.title])
 
   const fetchMoreData = async () => {
     setPage(page + 1)
