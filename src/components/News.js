@@ -42,7 +42,7 @@ const News = (props) => {
   }
 
   useEffect(() => {
-    document.title = `${capital(props.category)} - NewsMonkey`
+    document.title = `${capital(props.category)} - NewsToday`
     updateNews();
   }, [])
 
@@ -60,7 +60,7 @@ const News = (props) => {
   let nd = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, voluptates est. Necessitatibus aut sequi veritatis error neque beatae quidem quam eum";
   return (
     <>
-      <h1 className="text-center" style={{ margin: '80px 0px' }}>NewsMonkey - Top {capital(props.category)} Headlines</h1>
+      <h1 className="text-center" style={{ margin: '80px 0px' }}>NewsToday - Top {capital(props.category)} Headlines</h1>
       {loading && <Spinner />}
       <InfiniteScroll
         dataLength={articles.length}
